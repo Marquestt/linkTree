@@ -1,0 +1,146 @@
+* { 
+    --cor-principal: #272727;
+    /* --cor-link: #;
+    --cor-hover: #; */
+    --cor-fundo: #92FF77;
+    --cor-secundaria: #8B25FF;
+    --tamanho-principal: 1.2rem;
+    --tamanho-destaque: 1.8rem;
+    --tamanho-sub: 1.4rem;
+    --font-padrao: "Oxygen", sans-serif;
+    --font-titulo: "Playwrite DE Grund", cursive;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--cor-secundaria);
+    font-family: var(--font-padrao);
+    font-size: var(--tamanho-principal);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding: 4rem 2rem;
+    border-radius: 1rem;
+    background-color: var(--cor-fundo);
+    max-width: 70%;
+    min-width: 40%;
+    max-height: 90vh;
+    min-height: 50vh;
+    box-shadow: .5rem .5rem 2rem var(--cor-principal);
+}
+
+    .cabecalho {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+.titulo {
+    font-size: var(--tamanho-destaque);
+    font-family: var(--font-titulo);
+    font-weight: 600;
+}
+
+.container-principal {
+    line-height: 1.5rem;
+    height: 80%;
+    margin: 4rem 0;
+    max-width: 80%;
+}
+
+.subTitulo {
+    font-size: var(--tamanho-sub);
+    margin-bottom: 1.5rem;
+}
+
+.container-link {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.link {
+    color: var(--cor-secundaria);
+    transition-duration: 1s;
+}
+
+.link:hover {
+    color: var(--cor-principal);
+}
+
+.pageUp {
+    display: none;
+}
+
+.credito {
+    font-size: var(--tamanho-principal);
+}
+
+@media screen and (max-width: 600px) {
+
+    .container {
+        flex-shrink: 2;
+        padding: auto;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .cabecalho {
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    .titulo {
+        font-size: 1.4rem;
+    }
+
+    .container-principal {
+        flex-shrink: 2;
+        font-size: 1rem;
+        margin: 1rem;
+    }
+
+    .subTitulo {
+        font-size: 1.2rem;
+        margin-bottom: .5rem;
+    }
+
+    .container-link {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .link {
+        font-size: 1rem;
+    }
+
+    .link svg {
+        width: 18px;
+    }
+
+    .credito {
+        font-size: 1rem;
+    }
+
+    .pageUp {
+        display: block;
+        color: var(--cor-secundaria);
+        position: absolute;
+        bottom: .5rem;
+        right: .5rem;
+    }
+}
